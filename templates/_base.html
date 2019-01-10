@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	{{ if .Title }}
+      		<title>{{.Title}} - blog</title>
+    	{{ else }}
+      		<title>Welcome to blog!</title>
+		{{ end }}
+		
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+		<style>
+			.container {
+				max-width: 960px;
+			}
+		</style>
+  	</head>
+  	<body>
+		<div class="d-flex flex-colum flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+			<h5 class="my-0 mr-md-auto font-weight-normal">Zafkiel</h5>
+			<nav class="my-2 my-md-0 mr-md-3">
+				<a class="p-2 text-dark" href="/">Home</a>
+				<a class="p-2 text-dark" href="/explore">Explore</a>
+				{{if .CurrentUser}}
+					<a class="p-2 text-dark" href="/user/{{.CurrentUser}}">Profile</a>
+				{{end}}
+			</nav>
+
+      		{{ if .CurrentUser }}
+        		<a class="btn btn-outline-primary" href="/logout">Logot</a>
+      		{{ else }}
+        		<a class="btn btn-outline-primary" href="/login">Login</a>
+      		{{ end }}
+		</div>
+		
+		<div class="container">
+			{{ template "content" . }}
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  	</body>
+</html>

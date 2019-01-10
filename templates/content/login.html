@@ -1,0 +1,21 @@
+{{ define "content" }}
+    <h3>Login</h3>
+    <div>
+        <form action="/login" method="post" name="login">
+            <p><input class="form-control" type="text" name="username" value="" placeholder="Username or Email"></p>
+            <p><input class="form-control" type="password" name="password" value="" placeholder="Password"></p>
+            <p><input class="btn btn-outline-primary" type="submit" class="btn btn-outline-primary" value="submit" value="Login"></p>
+        </form>
+    </div>
+
+    <p>New User? <a href="/register">Click to Register!</a></p>
+    <p>Forget Password? <a href="/reset_password_request">Click to Reset Password!</a></p>
+
+    {{ if .Errs }}
+        <ul>
+            {{ range .Errs }}
+                <li>{{.}}</li>
+            {{ end }}
+        </ul>
+    {{ end }}
+{{ end }}
