@@ -1,11 +1,11 @@
 package main
 
 import (
+	"go-zafkiel/package/controller"
+	"go-zafkiel/package/model"
 	"log"
 	"net/http"
 	"os"
-	"zafkiel/package/controller"
-	"zafkiel/package/model"
 
 	"github.com/gorilla/context"
 	_ "github.com/jinzhu/gorm/dialects/mysql"

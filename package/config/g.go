@@ -25,7 +25,10 @@ func init() {
 func getConfig(projectName string) {
 	viper.SetConfigName("config")
 
-	viper.AddConfigPath("./src/zafkiel/")
+	// viper.AddConfigPath("./src/zafkiel/")
+	viper.AddConfigPath(".")
+	viper.AddConfigPath(fmt.Sprintf("$HOME/.%s", projectName))
+	viper.AddConfigPath(fmt.Sprintf("/data/docker/config/%s", projectName))
 
 	viper.SetConfigType("yaml")
 

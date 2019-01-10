@@ -1,8 +1,6 @@
 package vm
 
-import (
-	"zafkiel/package/model"
-)
+import "go-zafkiel/package/model"
 
 //ProfileViewModel struct
 type ProfileViewModel struct {

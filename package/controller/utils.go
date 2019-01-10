@@ -4,6 +4,8 @@ import (
 	"crypto/tls"
 	"errors"
 	"fmt"
+	"go-zafkiel/package/config"
+	"go-zafkiel/package/vm"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -11,13 +13,11 @@ import (
 	"regexp"
 	"strconv"
 	"text/template"
-	"zafkiel/package/config"
-	"zafkiel/package/vm"
 
 	gomail "gopkg.in/gomail.v2"
 )
 
-const basePath = "./src/zafkiel/templates"
+const basePath = "templates"
 
 //PopulateTemplates func
 //Create map template name to template.Template

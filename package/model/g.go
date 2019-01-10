@@ -1,8 +1,8 @@
 package model
 
 import (
+	"go-zafkiel/package/config"
 	"log"
-	"zafkiel/package/config"
 
 	"github.com/jinzhu/gorm"
 )

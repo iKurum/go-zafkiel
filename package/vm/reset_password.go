@@ -1,6 +1,6 @@
 package vm
 
-import "zafkiel/package/model"
+import "go-zafkiel/package/model"
 
 //ResetPasswordViewModel struct
 type ResetPasswordViewModel struct {

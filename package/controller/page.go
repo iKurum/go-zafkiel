@@ -3,10 +3,10 @@ package controller
 import (
 	"bytes"
 	"fmt"
+	"go-zafkiel/package/vm"
 	"log"
 	"net/http"
 	"text/template"
-	"zafkiel/package/vm"
 
 	"github.com/gorilla/mux"
 )

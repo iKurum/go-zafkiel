@@ -1,7 +1,7 @@
 package vm
 
 import (
-	"zafkiel/package/model"
+	"go-zafkiel/package/model"
 )
 
 //IndexViewModel struct

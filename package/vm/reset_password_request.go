@@ -1,8 +1,8 @@
 package vm
 
 import (
+	"go-zafkiel/package/model"
 	"log"
-	"zafkiel/package/model"
 )
 
 //ResetPasswordRequestViewModel struct

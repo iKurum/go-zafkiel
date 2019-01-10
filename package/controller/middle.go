@@ -1,9 +1,9 @@
 package controller
 
 import (
+	"go-zafkiel/package/model"
 	"log"
 	"net/http"
-	"zafkiel/package/model"
 )
 
 func middleAuth(next http.HandlerFunc) http.HandlerFunc {

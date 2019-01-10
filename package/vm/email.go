@@ -1,8 +1,8 @@
 package vm
 
 import (
-	"zafkiel/package/config"
-	"zafkiel/package/model"
+	"go-zafkiel/package/config"
+	"go-zafkiel/package/model"
 )
 
 //EmailViewModel struct

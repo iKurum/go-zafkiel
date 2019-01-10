@@ -1,6 +1,6 @@
 package vm
 
-import "zafkiel/package/model"
+import "go-zafkiel/package/model"
 
 //ProfileEditViewModel struct
 type ProfileEditViewModel struct {
