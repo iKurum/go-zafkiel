@@ -1,1 +1,1 @@
-web: go-zafkiel-code
+web: go-zafkiel
