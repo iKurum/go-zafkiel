@@ -16,6 +16,9 @@ func SetDB(database *gorm.DB) {
 
 //ConnectToDB func
 func ConnectToDB() *gorm.DB {
+	if config.IsHeroku() {
+		return ConnectToDBByDBType("postgres", config.GetHerokuConnectingString())
+	}
 	return ConnectToDBByDBType("mysql", config.GetMysqlConnectingString())
 }
 
