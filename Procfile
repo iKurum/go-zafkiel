@@ -1,1 +1,1 @@
-web: go-zafkiel
+web: go run main.go
