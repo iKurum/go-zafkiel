@@ -1,1 +1,1 @@
-web: go run go-zafkiel
+web: go-zafkiel
