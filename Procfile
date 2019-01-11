@@ -1,1 +1,1 @@
-web: go-zafkiel-started
+web: go run go-zafkiel
