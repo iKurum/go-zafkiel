@@ -17,7 +17,7 @@ import (
 	gomail "gopkg.in/gomail.v2"
 )
 
-const basePath = "templates"
+const basePath = "./templates"
 
 //PopulateTemplates func
 //Create map template name to template.Template

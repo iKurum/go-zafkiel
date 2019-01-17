@@ -27,7 +27,7 @@ func init() {
 //Startup func
 func Startup() {
 	//启动静态服务
-	http.Handle("/asset/", http.StripPrefix("/asset/", http.FileServer(http.Dir("./src/zafkiel/asset"))))
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
 
 	pageController.registerRoutes()
 }
