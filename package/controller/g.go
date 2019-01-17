@@ -1,7 +1,9 @@
 package controller
 
 import (
+	"log"
 	"net/http"
+	"os"
 	"text/template"
 
 	"github.com/gorilla/sessions"
@@ -25,9 +27,14 @@ func init() {
 }
 
 //Startup func
+//registerRoutes
 func Startup() {
-	//启动静态服务
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
-
-	pageController.registerRoutes()
+	port := os.Getenv("PORT")
+	if port != "" {
+		log.Println("Running on port: ", port)
+		http.ListenAndServe(":"+port, pageController.registerRoutes())
+	} else {
+		log.Println("Running on port: ", 9090)
+		http.ListenAndServe(":9090", pageController.registerRoutes())
+	}
 }

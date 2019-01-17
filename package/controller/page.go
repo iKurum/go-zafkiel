@@ -13,7 +13,7 @@ import (
 
 type page struct{}
 
-func (p page) registerRoutes() {
+func (p page) registerRoutes() *mux.Router {
 	r := mux.NewRouter()
 	r.HandleFunc("/logout", middleAuth(logoutHandler))
 	r.HandleFunc("/login", loginHandler)
@@ -31,6 +31,10 @@ func (p page) registerRoutes() {
 	r.HandleFunc("/404", notfoundHandler)
 
 	http.Handle("/", r)
+	//启动静态服务
+	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("static/"))))
+
+	return r
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
